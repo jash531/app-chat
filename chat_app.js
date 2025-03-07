@@ -27,7 +27,7 @@ function promptUserName() {
 
 // Function to Connect WebSocket with Reconnection Support
 function connectWebSocket() {
-    chatSocket = new WebSocket("ws://localhost:8090");
+    chatSocket = new WebSocket("wss://app-chat-z3rs.onrender.com"); // Updated WebSocket URL
 
     chatSocket.onopen = () => {
         isSocketConnected = true;
