@@ -1,0 +1,28 @@
+name: Deploy Frontend
+
+on:
+  push:
+    branches:
+      - main  # Change this if your branch is different
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build Project
+      run: npm run build  # Change this if your build command is different
+
+    - name: Deploy to GitHub Pages
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@github.com"
+        git add .
+        git commit -m "Automated Deployment"
+        git push origin main --force
