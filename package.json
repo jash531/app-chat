@@ -1,6 +1,17 @@
 {
+  "name": "app-chat",
+  "version": "1.0.0",
+  "description": "A simple chat app",
+  "main": "socket_server.js",
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "start": "node socket_server.js"
+  },
   "dependencies": {
     "express": "^4.21.2",
     "ws": "^8.18.1"
   }
 }
+
